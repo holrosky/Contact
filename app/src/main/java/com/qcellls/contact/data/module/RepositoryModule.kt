@@ -1,8 +1,8 @@
-package com.qcellls.contact.di
+package com.qcellls.contact.data.module
 
 import android.content.Context
-import com.qcellls.contact.repository.ContactRepository
-import com.qcellls.contact.repository.ContactRepositoryImpl
+import com.qcellls.contact.data.repository.ContactRepositoryImpl
+import com.qcellls.contact.ui.repository.ContactRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object RepositoryModule {
     @Singleton
     @Provides
     fun provideContactRepository(@ApplicationContext appContext: Context): ContactRepository {
